@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <h2 class="passward"><span id="result1"></span><span id="copy" onclick="copy()"></span></h2>
+        <h3>
+            Passward length is <span id="selectedRange"></span>
+        </h3>
+        <input type="range" id="range" min="4" max="20" value="6" oninput="decideRange()">
+        <div class="checkboxes">
+            <div class="forPadding"><input type="checkbox" class="checkbox" id="Uppercase" name="uppercase"><label for="uppercase"> Include Uppercase</label>
+            </div>
+            <div class="forPadding"><input type="checkbox" class="checkbox" id="number" name="number"><label for="number"> Include Number</label>
+            </div>
+            <div class="forPadding"><input type="checkbox" class="checkbox" id="character" name="character"><label for="character"> Include Character</label>
+            </div>
+        </div>
+       <button class="generate" onclick="result()"> GENERATE PASSWORD</button>
+    </div>
+</body>
+
+</html>
